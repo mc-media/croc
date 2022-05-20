@@ -24,7 +24,7 @@ func run() (err error) {
 	fmt.Println(versionNew)
 	fmt.Println(versionHashNew)
 
-	err = replaceInFile("src/cli/cli.go", `Version = "`, `"`, versionNew+"-"+versionHashNew)
+	err = replaceInFile("src/cli/cli.go", `Version = "`, `"`, versionNew+"mcm-"+versionHashNew)
 	if err == nil {
 		fmt.Printf("updated cli.go to version %s\n", versionNew)
 	}
